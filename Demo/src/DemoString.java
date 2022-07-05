@@ -20,9 +20,9 @@ public class DemoString {
             if(substring[1].indexOf(".")>0)
                 System.out.println("Valid Email");
             else
-                System.out.println("Invalid Email");
+                System.out.println(". Invalid Email");
         }else {
-            System.out.println("InValid Email");
+            System.out.println("@ InValid Email");
         }
     }
 
