@@ -1,11 +1,14 @@
 package in.techdenovo.apps.view;
 
 import in.techdenovo.apps.dao.StudentDao;
+import in.techdenovo.apps.dao.StudentDao2File;
 
 import java.util.Scanner;
 
 public class Menu {
     StudentDao studentDao = new StudentDao();
+
+    StudentDao2File studentDao2File = new StudentDao2File();
     public void displayMenu(){
         do {
             System.out.println("****Main Menu*******");
@@ -20,11 +23,11 @@ public class Menu {
             switch (choice){
                 case 1:
                     System.out.println("Inside Input Data");
-                    studentDao.inputData();
+                    studentDao2File.inputData();
                     break;
                 case 2:
                     System.out.println("Display Student Data");
-                    studentDao.displayStudentData();
+                    studentDao2File.displayStudentData();
                     break;
                 case 3:
                     System.out.println("Update Student Data");
