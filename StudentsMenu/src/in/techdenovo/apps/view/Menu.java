@@ -29,7 +29,7 @@ public class Menu {
                     break;
                 case 2:
                     System.out.println("Display Student Data");
-                    studentDao2File.displayStudentData();
+                    studentDao2Database.displayStudentData();
                     break;
                 case 3:
                     System.out.println("Update Student Data");

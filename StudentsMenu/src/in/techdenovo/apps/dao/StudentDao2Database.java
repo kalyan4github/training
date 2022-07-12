@@ -9,6 +9,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -44,6 +45,8 @@ public class StudentDao2Database {
                 ps.setString(3,newStudent.getMobileNo());
 
                 ps.executeUpdate();
+                System.out.println("Sucessfully Added to Database");
+                conn.close();
             }else {
                 System.out.println("Connection is: "+conn);
             }
@@ -56,6 +59,14 @@ public class StudentDao2Database {
     }
     public void displayStudentData(){
         try {
+            Connection conn= dbUtil.getConnection();
+            String query= "SELECT * FROM students";
+            PreparedStatement ps = conn.prepareStatement(query);
+            ResultSet rs= ps.executeQuery();
+            while(rs.next()){
+                System.out.println(rs.getInt("ID")+"\t"+rs.getString("first_name")+"\t"+rs.getString("last_name")+"\t"+rs.getString("mobile_no"));
+            }
+            conn.close();
 
         } catch (Exception e) {
             throw new RuntimeException(e);
