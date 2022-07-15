@@ -33,7 +33,7 @@ public class Menu {
                     break;
                 case 3:
                     System.out.println("Update Student Data");
-                    studentDao.updateStudent();
+                    studentDao2Database.updateStudent();
                     break;
                 case 4:
                     System.out.println("Exiting...");

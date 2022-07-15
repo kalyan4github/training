@@ -5,6 +5,7 @@ public class Student {
     private String firstName;
     private String lastName;
     private String mobileNo;
+    private String city;
 
     public int getId() {
         return id;
@@ -36,5 +37,13 @@ public class Student {
 
     public void setMobileNo(String mobileNo) {
         this.mobileNo = mobileNo;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 }
