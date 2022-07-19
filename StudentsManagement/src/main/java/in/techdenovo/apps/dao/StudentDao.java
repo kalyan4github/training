@@ -37,4 +37,26 @@ public class StudentDao {
         }
         return studentList;
     }
+
+    public void addStudent(Student student){
+        if(student!=null){
+            String query = "insert into students (first_name,last_name,mobile_no,city) values (?,?,?,?)";
+            Connection conn = new DbUtil().getConnection();
+            try{
+                if(conn!=null){
+                    PreparedStatement ps = conn.prepareStatement(query);
+                    ps.setString(1,student.getFirstName());
+                    ps.setString(2,student.getLastName());
+                    ps.setString(3,student.getMobileNo());
+                    ps.setString(4,student.getCity());
+
+                    ps.executeUpdate();
+                }
+                conn.close();
+            }catch (SQLException e){
+                System.out.println(e);;
+            }
+
+        }
+    }
 }

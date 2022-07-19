@@ -11,17 +11,18 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("/")
-public class HomeServlet extends HttpServlet {
-
+@WebServlet("/students")
+public class StudentServlet extends HttpServlet {
+    StudentDao studentDao = new StudentDao();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.sendRedirect("home.jsp");
-
+        List<Student> studentList = studentDao.getAllStudents();
+        req.setAttribute("Students",studentList);
+        req.getRequestDispatcher("list-students.jsp").forward(req,resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
+
     }
 }
