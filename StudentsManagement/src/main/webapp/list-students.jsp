@@ -18,6 +18,7 @@
     <div class="container">
 
             <h1>Displaying Student List</h1>
+
             <table border ="1" width="500" align="center">
                <tr bgcolor="00FF7F">
                 <th><b> Id</b></th>
