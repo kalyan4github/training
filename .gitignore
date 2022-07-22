@@ -1,0 +1,14 @@
+*.class
+.idea
+CLIMenu/.idea
+CLIMenu/.idea/*
+CLIMenu/out
+CLIMenu/out/*
+CLIMenu.iml
+StudentsMenu/.idea
+StudentsMenu/out
+StudentMenu.iml
+StudentsManagement/.idea
+StudentsManagement/target
+StudentsManagement/target/*
+StudentsManagement.iml

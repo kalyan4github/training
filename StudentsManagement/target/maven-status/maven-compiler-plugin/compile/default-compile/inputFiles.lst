@@ -1,4 +1,7 @@
-F:\development\tdnblog_workspace\StudentsManagement\src\main\java\in\techdenovo\apps\model\Student.java
-F:\development\tdnblog_workspace\StudentsManagement\src\main\java\in\techdenovo\apps\dao\StudentDao.java
-F:\development\tdnblog_workspace\StudentsManagement\src\main\java\in\techdenovo\apps\controller\HomeServlet.java
-F:\development\tdnblog_workspace\StudentsManagement\src\main\java\in\techdenovo\apps\util\DbUtil.java
+D:\development\training\StudentsManagement\src\main\java\in\techdenovo\apps\controller\ListStudentServlet.java
+D:\development\training\StudentsManagement\src\main\java\in\techdenovo\apps\dao\StudentDao.java
+D:\development\training\StudentsManagement\src\main\java\in\techdenovo\apps\util\DbUtil.java
+D:\development\training\StudentsManagement\src\main\java\in\techdenovo\apps\controller\UpdateStudentServlet.java
+D:\development\training\StudentsManagement\src\main\java\in\techdenovo\apps\model\Student.java
+D:\development\training\StudentsManagement\src\main\java\in\techdenovo\apps\controller\AddStudentServlet.java
+D:\development\training\StudentsManagement\src\main\java\in\techdenovo\apps\controller\HomeServlet.java
