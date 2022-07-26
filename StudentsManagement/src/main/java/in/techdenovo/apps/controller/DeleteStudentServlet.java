@@ -9,20 +9,23 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 
-@WebServlet("/students")
-public class ListStudentServlet extends HttpServlet {
-    StudentDao studentDao = new StudentDao();
+@WebServlet("/delete-student")
+public class DeleteStudentServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<Student> studentList = studentDao.getAllStudents();
-        req.setAttribute("Students",studentList);
-        req.getRequestDispatcher("list_students.jsp").forward(req,resp);
+        int id =Integer.parseInt(req.getParameter("id"));
+        StudentDao studentDao = new StudentDao();
+        Student student= studentDao.getStudentById(id);
+        req.setAttribute("student",student);
+        req.getRequestDispatcher("delete-student.jsp").forward(req,resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
+        int id = Integer.parseInt(req.getParameter("id"));
+        StudentDao studentDao = new StudentDao();
+        studentDao.deleteStudentById(id);
+        resp.sendRedirect("students");
     }
 }

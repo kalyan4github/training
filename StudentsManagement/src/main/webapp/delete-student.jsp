@@ -47,7 +47,7 @@
         <div class="row">
             <div class="col"></div>
             <div class="col">
-                <form action="update-student" method="post">
+                <form action="delete-student" method="post">
                     <% Student student = (Student) request.getAttribute("student");%>
                     <div class="mb-3">
                       <label for="inputFirstName" class="form-label">Id</label>
@@ -71,7 +71,7 @@
                     </div>
 
                     
-                    <button type="submit" class="btn btn-primary">Update Student</button>
+                    <button type="submit" class="btn btn-danger">Confirm Delete Student</button>
                   </form>
             </div>
             <div class="col"></div>
