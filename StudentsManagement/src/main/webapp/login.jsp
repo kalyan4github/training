@@ -26,6 +26,7 @@
                         <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
                         <label for="floatingPassword">Password</label>
                     </div>
+                    <br><p style="color: red">${message}</p><br>
                     <div class="d-grid gap-2">
                         <button type="submit" class=" mt-4 btn btn-info">Login</button>
                     </div>
